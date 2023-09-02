@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Home, Search, Profile } from '../screens'
 import { Ionicons } from 'react-native-vector-icons'
-import { COLORS } from '../../constants'
+import { COLORS } from '../constants'
 
 const Tab = createBottomTabNavigator()
 
@@ -15,7 +15,7 @@ const screenOptions = {
     left: 0,
     right: 0,
     elevation: 0,
-    height: 70
+    height: 60
   }
 }
 
