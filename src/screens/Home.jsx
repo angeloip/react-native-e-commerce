@@ -4,7 +4,7 @@ import styles from '../styles/home.style'
 import { Ionicons, Fontisto } from 'react-native-vector-icons'
 import { TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native'
-import { Welcome } from '../components'
+import { Welcome, Carousel, Headings, ProductRow } from '../components'
 
 const Home = () => {
   return (
@@ -25,6 +25,9 @@ const Home = () => {
       </View>
       <ScrollView>
         <Welcome />
+        <Carousel />
+        <Headings />
+        <ProductRow />
       </ScrollView>
     </SafeAreaView>
   )
