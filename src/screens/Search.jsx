@@ -1,8 +1,21 @@
-import { View, TextInput, TouchableOpacity } from 'react-native'
+import {
+  View,
+  TextInput,
+  TouchableOpacity,
+  Text,
+  Image,
+  ScrollView
+} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Feather, Ionicons } from 'react-native-vector-icons'
 import { COLORS, SIZES } from '../constants'
 import styles from '../styles/search.style'
+
+const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64
+}
 
 const Search = () => {
   return (
@@ -34,6 +47,22 @@ const Search = () => {
           </TouchableOpacity>
         </View>
       </View>
+      <ScrollView>
+        <Text style={{ fontSize: 96 }}>If you like</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{ fontSize: 96 }}>Scrolling down</Text>
+        <Text style={{ fontSize: 96 }}>If you like</Text>
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Image source={logo} />
+        <Text style={{ fontSize: 96 }}>Scrolling down</Text>
+      </ScrollView>
     </SafeAreaView>
   )
 }
