@@ -8,7 +8,7 @@ import { Welcome, Carousel, Headings, ProductRow } from '../components'
 
 const Home = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.appBarWrapper}>
         <View style={styles.appBar}>
           <Ionicons name="location-outline" size={24} color="black" />

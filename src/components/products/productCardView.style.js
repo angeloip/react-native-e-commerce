@@ -3,7 +3,6 @@ import { COLORS, SIZES } from '../../constants'
 
 const styles = StyleSheet.create({
   container: {
-    height: 380,
     width: 182,
     marginEnd: 22,
     borderRadius: SIZES.medium,
@@ -35,6 +34,11 @@ const styles = StyleSheet.create({
   price: {
     fontFamily: 'semiBold',
     fontSize: SIZES.medium
+  },
+  addBtn: {
+    position: 'absolute',
+    bottom: SIZES.xSmall,
+    right: SIZES.xSmall
   }
 })
 

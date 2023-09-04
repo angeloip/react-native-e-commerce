@@ -2,10 +2,12 @@ import { TouchableOpacity, Text, View, Image } from 'react-native'
 import styles from './productCardView.style'
 import { COLORS } from '../../constants'
 import { Ionicons } from 'react-native-vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 const ProductCardView = () => {
+  const navigation = useNavigation()
   return (
-    <TouchableOpacity onPress={() => {}}>
+    <TouchableOpacity onPress={() => navigation.navigate('productDetails')}>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image
@@ -24,8 +26,7 @@ const ProductCardView = () => {
           </Text>
           <Text style={styles.price}>$2353.00</Text>
         </View>
-        <Text>Provaider</Text>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.addBtn}>
           <Ionicons name="add-circle" size={35} color={COLORS.primary} />
         </TouchableOpacity>
       </View>
