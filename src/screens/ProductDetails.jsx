@@ -1,10 +1,19 @@
 import { Text, View, TouchableOpacity, Image } from 'react-native'
 import styles from '../styles/productDetails.style'
-import { Ionicons, SimpleLineIcons } from 'react-native-vector-icons'
+import {
+  Ionicons,
+  SimpleLineIcons,
+  MaterialCommunityIcons,
+  Fontisto
+} from 'react-native-vector-icons'
 import { useState } from 'react'
+import { useRoute } from '@react-navigation/native'
 
 const ProductDetails = ({ navigation }) => {
   const [quantity, setQuantity] = useState(1)
+  const {
+    params: { item }
+  } = useRoute()
 
   return (
     <View style={styles.container}>
@@ -18,15 +27,15 @@ const ProductDetails = ({ navigation }) => {
       </View>
       <Image
         source={{
-          uri: 'https://i.ibb.co/SrtQZb3/cb2e64a8-ad4c-4d45-b58b-b0c7e11b6bb4-fn1.jpg'
+          uri: item.imageUrl
         }}
         style={styles.image}
       />
       <View style={styles.details}>
         <View style={styles.titleRow}>
-          <Text style={styles.title}>Hello my people</Text>
+          <Text style={styles.title}>{item.title}</Text>
           <View style={styles.priceWrapper}>
-            <Text style={styles.price}>$ 660.00</Text>
+            <Text style={styles.price}>$ {item.price}</Text>
           </View>
         </View>
 
@@ -58,7 +67,38 @@ const ProductDetails = ({ navigation }) => {
           </View>
         </View>
 
-        <View style={styles.descriptionWrapper}></View>
+        <View style={styles.descriptionWrapper}>
+          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.descriptionTxt}>{item.description}</Text>
+        </View>
+
+        <View style={styles.locationWrapper}>
+          <View style={styles.location}>
+            <View
+              style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}
+            >
+              <Ionicons name="location" size={20} />
+              <Text>{item.productLocation}</Text>
+            </View>
+
+            <View
+              style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}
+            >
+              <MaterialCommunityIcons name="truck-delivery-outline" size={20} />
+              <Text>Free Delivery</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.cartRow}>
+          <TouchableOpacity onPress={() => {}} style={styles.cartBtn}>
+            <Text style={styles.cartTxt}>BUY NOW</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => {}} style={styles.addCart}>
+            <Fontisto name="shopping-bag" size={20} style={styles.bagIcon} />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   )

@@ -52,13 +52,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 5,
+    marginTop: SIZES.large,
     marginHorizontal: SIZES.large
   },
   rating: {
-    top: SIZES.large,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
     alignItems: 'center'
   },
   ratingTxt: {
@@ -66,7 +64,6 @@ const styles = StyleSheet.create({
     color: COLORS.gray
   },
   quantity: {
-    top: SIZES.large,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10
@@ -75,6 +72,59 @@ const styles = StyleSheet.create({
     fontFamily: 'medium',
     color: COLORS.gray,
     fontSize: SIZES.medium
+  },
+  descriptionWrapper: {
+    marginTop: SIZES.large - 5,
+    marginHorizontal: SIZES.large
+  },
+  descriptionTitle: {
+    fontFamily: 'medium',
+    fontSize: SIZES.large - 2
+  },
+  descriptionTxt: {
+    fontFamily: 'regular',
+    fontSize: SIZES.small
+  },
+  locationWrapper: {
+    marginVertical: SIZES.small
+  },
+  location: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: COLORS.secondary,
+    marginHorizontal: SIZES.large,
+    padding: 10,
+    borderRadius: SIZES.large
+  },
+  cartRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: SIZES.large
+  },
+  cartBtn: {
+    width: SIZES.width * 0.7,
+    backgroundColor: COLORS.black,
+    padding: SIZES.small / 2,
+    borderRadius: SIZES.large
+  },
+  cartTxt: {
+    marginLeft: SIZES.small,
+    fontFamily: 'semiBold',
+    fontSize: SIZES.medium,
+    color: COLORS.lightWhite
+  },
+  addCart: {
+    width: 37,
+    height: 37,
+    borderRadius: 50,
+    backgroundColor: COLORS.black,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  bagIcon: {
+    color: COLORS.lightWhite
   }
 })
 
